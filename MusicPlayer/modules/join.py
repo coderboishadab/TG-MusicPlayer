@@ -3,11 +3,11 @@ import asyncio
 from pyrogram import Client, filters
 from pyrogram.errors import UserAlreadyParticipant, FloodWait
 
-from Codexun import app, ASSUSERNAME
-from Codexun.utils.decorators import sudo_users_only, errors
-from Codexun.utils.administrator import adminsOnly
-from Codexun.utils.filters import command
-from Codexun.tgcalls import client as USER
+from MusicPlayer import app, ASSUSERNAME
+from MusicPlayer.utils.decorators import sudo_users_only, errors
+from MusicPlayer.utils.administrator import adminsOnly
+from MusicPlayer.utils.filters import command
+from MusicPlayer.tgcalls import client as USER
 
 
 @app.on_message(
@@ -17,7 +17,7 @@ from Codexun.tgcalls import client as USER
 async def addchannel(client, message):
     if message.sender_chat:
         return await message.reply_text(
-            "🔴 __You're an **Anonymous Admin**!__\n│\n╰ Revert back to user account from admin rights."
+            "🙄 __You're an **Anonymous Admin**!__\n│\n╰ Revert back to user account from admin rights."
         )
     permission = "can_delete_messages"
     m = await adminsOnly(permission, message)
@@ -44,7 +44,7 @@ async def addchannel(client, message):
         await USER.join_chat(link_bokep)
     except UserAlreadyParticipant:
         await message.reply_text(
-            f"🔴 **{user.first_name} already join this group**",
+            f"🚶 **{user.first_name} already join this group**",
         )
     except Exception as e:
         print(e)
@@ -59,7 +59,7 @@ async def addchannel(client, message):
 async def rem(USER, message):
     if message.sender_chat:
         return await message.reply_text(
-            "🔴 __You're an **Anonymous Admin**!__\n│\n╰ Revert back to user account from admin rights."
+            "🙄 __You're an **Anonymous Admin**!__\n│\n╰ Revert back to user account from admin rights."
         )
     permission = "can_delete_messages"
     m = await adminsOnly(permission, message)
@@ -94,4 +94,4 @@ async def bye(client, message):
             await asyncio.sleep(int(e.x))
         except Exception:
             pass
-    await lol.edit(f"🏃‍♂️ `Assistant leaving...`\n\n» **Left:** {left} chats.")
+    await lol.edit(f"🚶 `Assistant leaving...`\n\n» **Left:** {left} chats.")
