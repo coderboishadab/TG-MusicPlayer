@@ -10,11 +10,11 @@
   <b>A lag free music player inspired by callsmusic and powered by pytgcalls.</b>
 </h3>
 
-# Installing your own Bot
+# Installing your own bot
 
 <details>
 
-  <summary> • 𝙳𝚎𝚙𝚕𝚘𝚢 𝚝𝚘 𝙷𝚎𝚛𝚘𝚔𝚞 • </summary>
+  <summary>⚡ 𝗗𝗲𝗽𝗹𝗼𝘆 𝘁𝗼 𝗛𝗲𝗿𝗼𝗸𝘂 ⚡</summary>
 
 ### I would suggest you to host this on Europe server for better quality and less crashes.
 
