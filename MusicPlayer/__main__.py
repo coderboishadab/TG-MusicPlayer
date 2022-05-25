@@ -1,15 +1,13 @@
-## Copyright (©) Team Codexun
-
 import asyncio
 import requests
 from pyrogram import Client
 from pytgcalls import idle
-from Codexun import app
-from Codexun import client
-from Codexun.database.functions import clean_restart_stage
-from Codexun.database.queue import get_active_chats, remove_active_chat
-from Codexun.tgcalls.calls import run
-from Codexun.config import API_ID, API_HASH, BOT_TOKEN, BG_IMG, OWNER_ID, BOT_NAME
+from MusicPlayer import app
+from MusicPlayer import client
+from MusicPlayer.database.functions import clean_restart_stage
+from MusicPlayer.database.queue import get_active_chats, remove_active_chat
+from MusicPlayer.tgcalls.calls import run
+from MusicPlayer.config import API_ID, API_HASH, BOT_TOKEN, BG_IMG, OWNER_ID, BOT_NAME
 
 
 response = requests.get(BG_IMG)
@@ -42,10 +40,10 @@ async def load_start():
         except Exception as e:
             print("Error came while clearing db")
             pass
-    await app.send_message(OWNER_ID, "**Bot Started Successfully**\n\nMake sure you joined @Codexun for regular updates from us.")
+    await app.send_message(OWNER_ID, "**Bot Started Successfully**\n\nMake sure you joined @AKH1LS for regular updates from me.")
     # If you change it then bot will be crash © copyrighted area
-    await client.join_chat("teamcodexun")
-    await client.join_chat("codexun")
+    await client.join_chat("BlueCodeSupport")
+    await client.join_chat("AKH1LS")
     print("[INFO]: STARTED")
     
 
@@ -57,7 +55,7 @@ Client(
     API_ID,
     API_HASH,
     bot_token=BOT_TOKEN,
-    plugins={"root": "Codexun.modules"},
+    plugins={"root": "MusicPlayer.modules"},
 ).start()
 
 run()
