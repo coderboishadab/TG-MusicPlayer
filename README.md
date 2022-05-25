@@ -2,7 +2,7 @@
   <b>TG Music Player</b>
 </h1>
 <p align="center">
-  <a href="#"><img src="https://te.legra.ph/file/38a3ac544f5527a77de18.jpg" width="300" height="300"></a> </br>
+  <a href="#"><img src="https://te.legra.ph/file/38a3ac544f5527a77de18.jpg" width="200" height="200"></a> </br>
 <h3 align="center">
   <b>A lag free music player inspired by callsmusic and powered by pytgcalls.</b>
 </h3>
