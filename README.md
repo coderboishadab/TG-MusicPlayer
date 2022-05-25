@@ -10,6 +10,14 @@
   <b>A lag free music player inspired by callsmusic and powered by pytgcalls.</b>
 </h3>
 
+## Requirements
+
+- FFmpeg
+- Python 3.10.0
+- [NodeJS](https://nodesource.com/)
+- [PyTgCalls](https://github.com/pytgcalls/pytgcalls)
+- [MongoDB](https://cloud.mongodb.com/)
+
 ## Installing your own bot
 
 <details>
@@ -33,14 +41,6 @@
 </details>
 
 _______
-
-## Requirements
-
-- FFmpeg
-- Python 3.10.0
-- [NodeJS](https://nodesource.com/)
-- [PyTgCalls](https://github.com/pytgcalls/pytgcalls)
-- [MongoDB](https://cloud.mongodb.com/)
 
 ## Support
 
