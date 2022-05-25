@@ -18,7 +18,7 @@
 
 ### I would suggest you to host this on Europe server for better quality and less crashes.
 
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy) 
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/AKH1LS/TG-MusicPlayer"><img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" target="_blank"/></a></p>
 
 </details>
 
@@ -28,7 +28,7 @@
 
 ### With XTZ Heroku Bot, now it is possible to deploy without leaving Telegram. Remember choose Europe server for better quality and less crashes.
 
-<p align="center"><a href="https://telegram.dog/XTZ_HerokuBot?start=UGF2YW5NYWdhci9Db2RleHVuTXVzaWNCb3QgbWFpbg"><img src="https://img.shields.io/badge/Deploy%20Via%20Telegram-blue?style=for-the-badge&logo=telegram" width="250""/</a>  </p>
+<p align="center"><a href="https://telegram.dog/XTZ_HerokuBot"><img src="https://img.shields.io/badge/Deploy%20Via%20Telegram-blue?style=for-the-badge&logo=telegram" width="250""/</a>  </p>
 
 </details>
 
