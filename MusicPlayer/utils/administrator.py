@@ -3,9 +3,9 @@ from functools import wraps
 from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
 from pyrogram.types import Message
 
-from Codexun import app
-from Codexun.config import SUDO_USERS
-from Codexun.modules.admins import member_permissions
+from MusicPlayer import app
+from MusicPlayer.config import SUDO_USERS
+from MusicPlayer.modules.admins import member_permissions
 
 
 async def authorised(message):
