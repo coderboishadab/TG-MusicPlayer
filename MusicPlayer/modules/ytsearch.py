@@ -7,8 +7,8 @@ import pyrogram
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from Codexun import app
-from Codexun.utils.filters import command
+from MusicPlayer import app
+from MusicPlayer.utils.filters import command
 
 
 logging.basicConfig(
@@ -30,10 +30,10 @@ async def ytsearch(_, message: Message):
         results = YoutubeSearch(query, max_results=7).to_dict()
         text = ""
         for i in range(4):
-            text += f"❂ **Title** - [{results[i]['title']}](https://youtube.com{results[i]['url_suffix']})\n"
-            text += f"❂ **Duration** - {results[i]['duration']}\n"
-            text += f"❂ **Views** - {results[i]['views']}\n"
-            text += f"❂ **Channel** - {results[i]['channel']}\n\n"
+            text += f"⚡ **Title** - [{results[i]['title']}](https://youtube.com{results[i]['url_suffix']})\n"
+            text += f"🥀 **Duration** - {results[i]['duration']}\n"
+            text += f"👀 **Views** - {results[i]['views']}\n"
+            text += f"🚶 **Channel** - {results[i]['channel']}\n\n"
         await m.edit(text, disable_web_page_preview=True)
     except Exception as e:
         await message.reply_text(str(e))
