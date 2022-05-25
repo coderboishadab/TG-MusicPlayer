@@ -3,12 +3,12 @@ import sys
 
 from git import Repo
 from pyrogram.types import Message
-from Codexun.utils.filters import command
+from MusicPlayer.utils.filters import command
 from pyrogram import Client, filters
 from os import system, execle, environ
 from git.exc import InvalidGitRepositoryError
-from Codexun.utils.decorators import sudo_users_only
-from Codexun.config import UPSTREAM_REPO, BOT_USERNAME, SUDO_USERS, BOT_NAME
+from MusicPlayer.utils.decorators import sudo_users_only
+from MusicPlayer.config import UPSTREAM_REPO, BOT_USERNAME, SUDO_USERS, BOT_NAME
 
 
 def gen_chlog(repo, diff):
@@ -60,4 +60,4 @@ async def check(_, message: Message):
         system("git pull -f && pip3 install -r requirements.txt")
         execle(sys.executable, sys.executable, "main.py", environ)
         return
-    await msg.edit("Bot is already in up-to-date mode with **[latest version](https://github.com/PavanMagar/CodexunMusicBot)**", disable_web_page_preview=True)
+    await msg.edit("Bot is already in up-to-date mode with **[latest version](https://github.com/AKH1LS/TG-MusicPlayer)**", disable_web_page_preview=True)
