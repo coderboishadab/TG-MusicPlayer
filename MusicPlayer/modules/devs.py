@@ -11,14 +11,14 @@ from time import time
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
-from Codexun import app, OWNER
-from Codexun.config import OWNER_ID, BOT_NAME, UPSTREAM_REPO, UPSTREAM_BRANCH
-from Codexun.database.chats import blacklist_chat, blacklisted_chats, whitelist_chat
-from Codexun.utils.decorators import sudo_users_only
-from Codexun.utils.decorators import errors
-from Codexun.utils.filters import command
-from Codexun.modules import check_heroku
-from Codexun.database.functions import start_restart_stage
+from MusicPlayer import app, OWNER
+from MusicPlayer.config import OWNER_ID, BOT_NAME, UPSTREAM_REPO, UPSTREAM_BRANCH
+from MusicPlayer.database.chats import blacklist_chat, blacklisted_chats, whitelist_chat
+from MusicPlayer.utils.decorators import sudo_users_only
+from MusicPlayer.utils.decorators import errors
+from MusicPlayer.utils.filters import command
+from MusicPlayer.modules import check_heroku
+from MusicPlayer.database.functions import start_restart_stage
 
 
 @app.on_message(command(["rebootmusic", "restart"]) & filters.user(OWNER_ID))
@@ -50,7 +50,7 @@ async def update(_, message: Message):
         await start_restart_stage(x.chat.id, x.message_id)
         os.execvp("python3", ["python3", "-m", "Codexun"])
     else:
-        await message.reply_text("Bot is already in the **up-to-date** mode with **[latest version](https://github.com/PavanMagar/CodexunMusicBot)**", disable_web_page_preview=True)
+        await message.reply_text("Bot is already in the **up-to-date** mode with **[latest version](https://github.com/AKH1LS/TG-MusicPlayer)**", disable_web_page_preview=True)
         
 async def aexec(code, client, message):
     exec(
