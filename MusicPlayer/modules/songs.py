@@ -6,9 +6,9 @@ import yt_dlp
 from pyrogram import Client, filters
 from youtube_search import YoutubeSearch
 
-from Codexun import app
-from Codexun.config import BOT_USERNAME
-from Codexun.utils.filters import command
+from MusicPlayer import app
+from MusicPlayer.config import BOT_USERNAME
+from MusicPlayer.utils.filters import command
 
 
 def time_to_seconds(time):
@@ -25,7 +25,7 @@ def song(client, message):
 
     query = "".join(" " + str(i) for i in message.command[1:])
     print(query)
-    m = message.reply("🔎 Finding the song...")
+    m = message.reply("Finding the song...")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=5).to_dict()
