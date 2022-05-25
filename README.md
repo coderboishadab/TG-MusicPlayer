@@ -51,6 +51,6 @@ _______
 
 - Pytgcalls
 - callsmusic
-- codexun for inspiration
+- codexun for main inspiration
 
 Actually, this project is inspired from every open source projects.
