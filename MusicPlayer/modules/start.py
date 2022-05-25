@@ -4,22 +4,22 @@ from pyrogram import Client, filters, __version__ as pyrover
 from pyrogram.errors import FloodWait, UserNotParticipant
 from pytgcalls import (__version__ as pytover)
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, ChatJoinRequest
-from Codexun.utils.filters import command
+from MusicPlayer.utils.filters import command
 
-from Codexun import BOT_NAME, BOT_USERNAME
-from Codexun.config import BOT_USERNAME 
-from Codexun.config import BOT_NAME
-from Codexun.config import START_IMG
+from MusicPlayer import BOT_NAME, BOT_USERNAME
+from MusicPlayer.config import BOT_USERNAME 
+from MusicPlayer.config import BOT_NAME
+from MusicPlayer.config import START_IMG
 
 @Client.on_message(command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_photo(
         photo=f"{START_IMG}",
-        caption=f"""**Welcome {message.from_user.mention()}** 👋
+        caption=f"""**Hello [{query.message.chat.first_name}](tg://user?id={query.message.chat.id})** 
 
-This is the **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) Bot,** a bot for playing high quality and unbreakable music in your groups voice chat.
+I am **[{BOT_NAME}](https://t.me/{BOT_USERNAME}),** a lag free music bot player for your groups 
 
-Just add me to your group & make as a admin with needed admin permissions to perform a right actions, now let's enjoy your music!
+I can play music in your groups without any bugs. Just add me to your group & promote as a admin with needed admin permissions to perform a right actions !
 
 Use the given buttons for more info📍""",
     reply_markup=InlineKeyboardMarkup(
