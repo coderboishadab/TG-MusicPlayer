@@ -1,6 +1,6 @@
 from typing import Dict, List, Union
 
-from Codexun.database import db
+from MusicPlayer.database import db
 
 
 chatsdb = db.chats
