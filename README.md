@@ -10,7 +10,7 @@
   <b>A lag free music player inspired by callsmusic and powered by pytgcalls.</b>
 </h3>
 
-# Installing your own bot
+## Installing your own bot
 
 <details>
 
@@ -33,9 +33,24 @@
 </details>
 
 
+
+## Requirements
+
+- FFmpeg
+- Python 3.10.0
+- [NodeJS](https://nodesource.com/)
+- [PyTgCalls](https://github.com/pytgcalls/pytgcalls)
+- [MongoDB](https://cloud.mongodb.com/)
+
 ## Support
 
 <a href="https://telegram.me/AKH1LS"><img src="https://img.shields.io/badge/Join-My%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a> 
 <a href="https://telegram.me/BlueCodeSupport"><img src="https://img.shields.io/badge/Join-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
 
+## Credits
 
+- Pytgcalls
+- callsmusic
+- codexun for inspiration
+
+Actually, this project is inspired from every open source projects.
