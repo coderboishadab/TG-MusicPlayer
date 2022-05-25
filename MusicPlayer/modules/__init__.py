@@ -1,5 +1,3 @@
-## Copyright (©) Team Codexun
-
 import heroku3
 import asyncio
 import os
@@ -11,7 +9,7 @@ from functools import wraps
 from pyrogram.types import Message
 
 from functools import wraps
-from Codexun.config import HEROKU_API_KEY, HEROKU_APP_NAME
+from MusicPlayer.config import HEROKU_API_KEY, HEROKU_APP_NAME
 
 
 def get_text(message: Message) -> [None, str]:
