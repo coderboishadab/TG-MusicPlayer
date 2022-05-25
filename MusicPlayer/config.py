@@ -1,7 +1,3 @@
-## Disclaimer By Team Codexun
-
-## Don't try to edit this file otherwise your bot will be crash.
-
 from os import getenv
 
 from dotenv import load_dotenv
