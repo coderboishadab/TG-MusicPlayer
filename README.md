@@ -33,7 +33,7 @@
 </details>
 
 
-## Get Support
+## Support
 
 <a href="https://telegram.me/AKH1LS"><img src="https://img.shields.io/badge/Join-My%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a> 
 <a href="https://telegram.me/BlueCodeSupport"><img src="https://img.shields.io/badge/Join-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
