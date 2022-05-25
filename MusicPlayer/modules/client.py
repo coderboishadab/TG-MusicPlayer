@@ -37,11 +37,11 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForbidden
 
 
-from Codexun.tgcalls import calls, queues
-from Codexun.tgcalls.youtube import download
-from Codexun.tgcalls import convert as cconvert
-from Codexun.tgcalls.calls import client as ASS_ACC
-from Codexun.database.queue import (
+from MusicPlayer.tgcalls import calls, queues
+from MusicPlayer.tgcalls.youtube import download
+from MusicPlayer.tgcalls import convert as cconvert
+from MusicPlayer.tgcalls.calls import client as ASS_ACC
+from MusicPlayer.database.queue import (
     get_active_chats,
     is_active_chat,
     add_active_chat,
@@ -51,11 +51,11 @@ from Codexun.database.queue import (
     music_off,
 )
 
-from Codexun import BOT_NAME, BOT_USERNAME
-from Codexun import app
-import Codexun.tgcalls
-from Codexun.tgcalls import youtube
-from Codexun.config import (
+from MusicPlayer import BOT_NAME, BOT_USERNAME
+from MusicPlayer import app
+import MusicPlayer.tgcalls
+from MusicPlayer.tgcalls import youtube
+from MusicPlayer.config import (
     DURATION_LIMIT,
     que,
     SUDO_USERS,
@@ -69,21 +69,21 @@ from Codexun.config import (
     BOT_NAME,
     BOT_USERNAME,
 )
-from Codexun.utils.filters import command
-from Codexun.utils.decorators import errors, sudo_users_only
-from Codexun.utils.administrator import adminsOnly
-from Codexun.utils.errors import DurationLimitError
-from Codexun.utils.gets import get_url, get_file_name
-from Codexun.modules.admins import member_permissions
+from MusicPlayer.utils.filters import command
+from MusicPlayer.utils.decorators import errors, sudo_users_only
+from MusicPlayer.utils.administrator import adminsOnly
+from MusicPlayer.utils.errors import DurationLimitError
+from MusicPlayer.utils.gets import get_url, get_file_name
+from MusicPlayer.modules.admins import member_permissions
 
 
 def others_markup(videoid, user_id):
     buttons = [
         [
-            InlineKeyboardButton(text="▷", callback_data=f"resumevc"),
-            InlineKeyboardButton(text="II", callback_data=f"pausevc"),
-            InlineKeyboardButton(text="‣‣I", callback_data=f"skipvc"),
-            InlineKeyboardButton(text="▢", callback_data=f"stopvc"),
+            InlineKeyboardButton(text="ʀᴇꜱᴜᴍᴇ", callback_data=f"resumevc"),
+            InlineKeyboardButton(text="ᴘᴀᴜꜱᴇ", callback_data=f"pausevc"),
+            InlineKeyboardButton(text="ꜱᴋɪᴘ", callback_data=f"skipvc"),
+            InlineKeyboardButton(text="ꜱᴛᴏᴘ", callback_data=f"stopvc"),
         ],[
             InlineKeyboardButton(text="Manage", callback_data=f"cls"),
         ],
@@ -208,11 +208,11 @@ highquality_keyboard = InlineKeyboardMarkup(
             InlineKeyboardButton("Low Quality", callback_data="low"),],
          [   InlineKeyboardButton("Medium Quality", callback_data="medium"),
             
-        ],[   InlineKeyboardButton("High Quality ✅", callback_data="high"),
+        ],[   InlineKeyboardButton("High Quality ", callback_data="high"),
             
         ],[
             InlineKeyboardButton(text="⬅️ Back", callback_data=f"cbmenu"),
-            InlineKeyboardButton(text="Close 🗑️", callback_data=f"cls"),
+            InlineKeyboardButton(text="⛔", callback_data=f"cls"),
         ],
     ]
 )
@@ -220,14 +220,14 @@ lowquality_keyboard = InlineKeyboardMarkup(
     [
         [
             
-            InlineKeyboardButton("Low Quality ✅", callback_data="low"),],
+            InlineKeyboardButton("Low Quality ", callback_data="low"),],
          [   InlineKeyboardButton("Medium Quality", callback_data="medium"),
             
         ],[   InlineKeyboardButton("High Quality", callback_data="high"),
             
         ],[
             InlineKeyboardButton(text="⬅️ Back", callback_data=f"cbmenu"),
-            InlineKeyboardButton(text="Close 🗑️", callback_data=f"cls"),
+            InlineKeyboardButton(text="⛔", callback_data=f"cls"),
         ],
     ]
 )
@@ -236,13 +236,13 @@ mediumquality_keyboard = InlineKeyboardMarkup(
         [
             
             InlineKeyboardButton("Low Quality", callback_data="low"),],
-         [   InlineKeyboardButton("Medium Quality ✅", callback_data="medium"),
+         [   InlineKeyboardButton("Medium Quality ", callback_data="medium"),
             
         ],[   InlineKeyboardButton("High Quality", callback_data="high"),
             
         ],[
             InlineKeyboardButton(text="⬅️ Back", callback_data=f"cbmenu"),
-            InlineKeyboardButton(text="Close 🗑️", callback_data=f"cls"),
+            InlineKeyboardButton(text="⛔", callback_data=f"cls"),
         ],
     ]
 )
@@ -263,10 +263,10 @@ menu_keyboard = InlineKeyboardMarkup(
     [
         [
             
-            InlineKeyboardButton("▷", callback_data="resumevc"),
-            InlineKeyboardButton("II", callback_data="pausevc"),
-            InlineKeyboardButton("‣‣I", callback_data="skipvc"),
-            InlineKeyboardButton("▢", callback_data="stopvc"),
+            InlineKeyboardButton("ʀᴇꜱᴜᴍᴇ", callback_data="resumevc"),
+            InlineKeyboardButton("ᴘᴀᴜꜱᴇ", callback_data="pausevc"),
+            InlineKeyboardButton("ꜱᴋɪᴘ", callback_data="skipvc"),
+            InlineKeyboardButton("ꜱᴛᴏᴘ", callback_data="stopvc"),
             
         ],[
             InlineKeyboardButton(text="Volume", callback_data=f"fifth"),
@@ -275,7 +275,7 @@ menu_keyboard = InlineKeyboardMarkup(
             InlineKeyboardButton(text="CleanDB", callback_data=f"dbconfirm"),
              InlineKeyboardButton(text="About", callback_data=f"nonabout"),
         ],[
-             InlineKeyboardButton(text="🗑️ Close Menu", callback_data=f"cls"),
+             InlineKeyboardButton(text="⛔ Close Menu ⛔", callback_data=f"cls"),
         ],
     ]
 )
@@ -422,7 +422,7 @@ async def cleandb(_, CallbackQuery):
         f"✅ __Erased queues successfully__\n│\n╰ Database cleaned by {rpk}",
         reply_markup=InlineKeyboardMarkup(
             [
-            [InlineKeyboardButton("Close 🗑️", callback_data="cls")]])
+            [InlineKeyboardButton("⛔", callback_data="cls")]])
         
     )
     else:
@@ -452,7 +452,7 @@ async def cbcmnds(_, query: CallbackQuery):
 • /song 
 - For download music
 
-Powered by **@{UPDATE}** !""",
+Developer - [Akhil](https://t.me/AKH1LS) !""",
         reply_markup=InlineKeyboardMarkup(
             [
               [
@@ -496,7 +496,7 @@ async def cbowncmnds(_, query: CallbackQuery):
 • /leaveall 
 - leaving assistant from all chats
 
-Powered by **@{UPDATE}** !""",
+Developer - [Akhil](https://t.me/AKH1LS) !""",
         reply_markup=InlineKeyboardMarkup(
             [
               
@@ -509,7 +509,7 @@ async def cbabout(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""**About {BOT_NAME} Bot 💡**
 
-**[{BOT_NAME}](https://t.me/{BOT_USERNAME})** Music Bot is the bot designed by **@{UPDATE}** for playing a high quality and unbreakable music in your groups voice chat.
+**[{BOT_NAME}](https://t.me/{BOT_USERNAME})** Music Bot is the bot designed by [Akhil](https://t.me/Akh1LS) for playing a high quality and unbreakable music in your groups voice chat.
 
 This bot helps you to play music, to search music from youtube and to download music from youtube server and many more features related to telegram voice chat feature.
 
@@ -533,13 +533,13 @@ async def cbstgs(_, query: CallbackQuery):
 
 After you played your song some menu buttons will be comes to manage your music playing on voice chat. They are as follows :
 
-• ▷ 
+• ʀᴇꜱᴜᴍᴇ 
 - Resume Music
-• II 
+• ᴘᴀᴜꜱᴇ 
 - Pause Music
-• ▢  
+• ꜱᴛᴏᴘ  
 - End Music
-• ‣‣ 
+• ꜱᴋɪᴘ 
 - Skip Music
 
 You can also open this menu through /menu and /settings command.
@@ -555,7 +555,7 @@ You can also open this menu through /menu and /settings command.
 @Client.on_callback_query(filters.regex("cbguide"))
 async def cbguide(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""**Read Basic Guide Carefully 💡**
+        f"""**These are some guides how you can start with music player**
 
 • First add this bot in your group
 
@@ -595,18 +595,15 @@ mostly, there wiil be the main error about to music assistant. If you are facing
 @Client.on_callback_query(filters.regex("cbtuto"))
 async def cbtuto(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""**Make Your Own Bot Like this💡**
-
-Good news! Now you can allow to make your own music bot like to this one. You will be get repo link below just click on it and follow steps!
-
-If you didn't know how to make your own bot then contact us at @TeamCodexun and get help from us.
-
-**🔗 Repo Link : https://github.com/PavanMagar/CodexunMusicBot**
+        f"""**Wanna make your own music bot like this ?**
+ 
+Now it is possible, thanks to open source projects, and mix work of [Akhil](https://t.me/AKH1LS), it is now very easy to make your own music Bot without knowing single line of code. If needed support, visit @BlueCodeSupport. !
+**Source : https://github.com/AKH1LS/TG-MusicPlayer**
 
 **Thanks !""",
        reply_markup=InlineKeyboardMarkup(
             [[
-                    InlineKeyboardButton("Get Repo 📦", url=f"https://github.com/PavanMagar/CodexunMusicBot")
+                    InlineKeyboardButton("Repo 🔗", url=f"https://github.com/AKH1LS/TG-MusicPlayer")
                 ],
               [InlineKeyboardButton("🔙  Back Home", callback_data="cbabout")]]
         ),
@@ -615,11 +612,11 @@ If you didn't know how to make your own bot then contact us at @TeamCodexun and 
 @Client.on_callback_query(filters.regex("cbhome"))
 async def cbhome(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""**Welcome [{query.message.chat.first_name}](tg://user?id={query.message.chat.id})** 👋
+        f"""**Hello [{query.message.chat.first_name}](tg://user?id={query.message.chat.id})** 
 
-This is the **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) bot,** a bot for playing high quality and unbreakable music in your groups voice chat.
+I am **[{BOT_NAME}](https://t.me/{BOT_USERNAME}),** a lag free music bot player for your groups 
 
-Just add me to your group & make as a admin with needed admin permissions to perform a right actions, now let's enjoy your music!
+I can play music in your groups without any bugs. Just add me to your group & promote as a admin with needed admin permissions to perform a right actions !
 
 Use the given buttons for more 📍""",
         reply_markup=InlineKeyboardMarkup(
@@ -665,7 +662,7 @@ async def cbmenu(_, query: CallbackQuery):
     chat_id = query.message.chat.id
     if is_music_playing(chat_id):
           await query.edit_message_text(
-              f"**⚙️ {BOT_NAME} Bot Settings**\n\n📮 Group : {query.message.chat.title}.\n📖 Grp ID : {query.message.chat.id}\n\n**Manage Your Groups Music System By Pressing Buttons Given Below 💡**",
+              f"**⚙️ {BOT_NAME} Bot Settings**\n\n📮 Group : {query.message.chat.title}.\n📖 Grp ID : {query.message.chat.id}\n\n**Manage Your Groups Music System By Pressing Buttons Given Below 👇**",
 
               reply_markup=menu_keyboard
          )
