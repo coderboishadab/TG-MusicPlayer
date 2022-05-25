@@ -1,9 +1,9 @@
 {
-    "name": "CodexunMusicBot",
-    "description": "Telegram Music Bot from Team Codexun allows you to stream music trought the telegram voice chat feature.",
-   "logo": "https://telegra.ph/file/7c8fc17112d22814da2e9.jpg",
+    "name": "TG-Music Player",
+    "description": "Inspired by callsmusic and powered by pytgcalls, this bot will allow you to play music without any bugs. Maintained by Akhil.",
+   "logo": "",
     "keywords": ["telegram music bot", "voice chat", "pytgcalls"],
-    "repository": "https://github.com/PavanMagar/CodexunMusic",
+    "repository": "https://github.com/AKH1LS/TG-MusicPlayer",
     "stack": "container",
     "env": {
         "SESSION_NAME": {
