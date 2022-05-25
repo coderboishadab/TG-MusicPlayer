@@ -14,11 +14,9 @@
 
 <details>
 
-  <summary> • Heroku • </summary>
+  <summary> • 𝙳𝚎𝚙𝚕𝚘𝚢 𝚝𝚘 𝙷𝚎𝚛𝚘𝚔𝚞 • </summary>
 
 ### I would suggest you to host this on Europe server for better quality and less crashes.
-
-<h4>Deploy to Heroku</h4>
 
 [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy) 
 
