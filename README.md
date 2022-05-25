@@ -1,4 +1,16 @@
-[![Python 3.6](https://img.shields.io/badge/Python-3.6%20or%20newer-blue.svg)](https://www.python.org/downloads/release/python-360/)
-[![GitHub repo size](https://img.shields.io/github/repo-size/AKH1LS/TG-MusicPlayer)
-[![HitCount](http://hits.dwyl.com/AKH1LS/TG-MusicPlayer.svg)](http://hits.dwyl.com/AKH1LS/TG-MusicPlayer)
-[![Contact Me](https://img.shields.io/badge/Telegram-Update%20Channel-informational)](https://t.me/AKH1LS)
+<h1 align="center">
+  <b>TG Music Player</b>
+</h1>
+
+<p align="center">
+  <img src="https://te.legra.ph/file/fa999d3949f84a2398d32.jpg" alt="The-HellBot">
+</p>
+
+<h6 align="center">
+  <b>Don't forget to star ⭐ the repo !</b>
+</h6>
+
+<h3 align="center">
+  <b>A lag free music player inspired by callsmusic and powered by pytgcalls.</b>
+</h3>
+
