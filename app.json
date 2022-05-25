@@ -1,7 +1,7 @@
 {
     "name": "TG-Music Player",
     "description": "Inspired by callsmusic and powered by pytgcalls, this bot will allow you to play music without any bugs. Maintained by Akhil.",
-   "logo": "",
+   "logo": "https://te.legra.ph/file/38a3ac544f5527a77de18.jpg",
     "keywords": ["telegram music bot", "voice chat", "pytgcalls"],
     "repository": "https://github.com/AKH1LS/TG-MusicPlayer",
     "stack": "container",
@@ -13,7 +13,7 @@
         "OWNER_ID": {
             "description": "fill with your telegram id as the owner of the bot",
             "required": true,
-            "value": "2056407064"
+            "value": "2102783671"
         },
         "ASSID": {
             "description": "fill with telegram id of your assistant account",
@@ -48,12 +48,12 @@
         "SUPPORT": {
             "description": "fill with your bot support group, please fill valid username",
             "required": false,
-            "value": "TeamCodexun"
+            "value": "BlueCodeSupport"
         },
         "UPDATE": {
             "description": "fill with your bot update channel, please fill valid username",
             "required": false,
-            "value": "Codexun"
+            "value": "AKH1LS"
         },
         "HEROKU_API_KEY": {
             "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
@@ -67,7 +67,7 @@
         },
         "UPSTREAM_REPO": {
             "description": "If you don't know this, Leave it as is or in /skip",
-            "value": "https://github.com/PavanMagar/CodexunMusicBot",
+            "value": "https://github.com/AKH1LS/TG-MusicPlayer",
             "required": true
         },
         "UPSTREAM_BRANCH": {
@@ -93,7 +93,7 @@
         "SUDO_USERS": {
             "description": "fill with the user id who can you want to set as sudo user (separate with space).",
             "required": true,
-            "value": "2056407064"
+            "value": "2102783671"
         },
         "DURATION_LIMIT": {
             "description": "filled, don't change this !",
