@@ -16,9 +16,9 @@ from pyrogram.types import (
     InputMediaPhoto,
     Message,
 )
-from Codexun import BOT_NAME, BOT_USERNAME
-from Codexun.config import BOT_NAME
-from Codexun.config import IMG_1
+from MusicPlayer import BOT_NAME, BOT_USERNAME
+from MusicPlayer.config import BOT_NAME
+from MusicPlayer.config import IMG_1
 
 import psutil
 from pyrogram import Client
@@ -27,11 +27,11 @@ from pyrogram import filters
 from pyrogram.types import Message
 from pytgcalls import __version__ as pytover
 
-from Codexun import (BOT_ID, BOT_NAME, SUDO_USERS, app, boottime)
-from Codexun import client as userbot
-from Codexun.database.chats import get_served_chats
-from Codexun.database.sudo import get_sudoers
-from Codexun.database.ping import get_readable_time
+from MusicPlayer import (BOT_ID, BOT_NAME, SUDO_USERS, app, boottime)
+from MusicPlayer import client as userbot
+from MusicPlayer.database.chats import get_served_chats
+from MusicPlayer.database.sudo import get_sudoers
+from MusicPlayer.database.ping import get_readable_time
 
 def dashmarkup():
     buttons = [
@@ -45,7 +45,7 @@ def dashmarkup():
         ],
         [InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="settingm")],
     ]
-    return f"🔧  **{BOT_NAME} Settings**", buttons
+    return f"🚶  **{BOT_NAME} Settings**", buttons
 
 
 stats1 = InlineKeyboardMarkup(
@@ -68,7 +68,7 @@ stats1 = InlineKeyboardMarkup(
         ],
        [
             InlineKeyboardButton(
-                text="Close Stats 🗑️", callback_data=f"statsclose"
+                text="⛔ Close ⛔", callback_data=f"statsclose"
             ),
         ],
     ]
@@ -88,7 +88,7 @@ statswait = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                text="ɢᴇᴛᴛɪɴɢ sᴛᴀᴛs....",
+                text="Getting Stats....",
                 callback_data=f"wait_stats",
             )
         ]
