@@ -2,8 +2,8 @@ import time
 from datetime import datetime
 
 import psutil
-from Codexun import Music_START_TIME, app
-from Codexun.utils.time import get_readable_time
+from MusicPlayer import Music_START_TIME, app
+from MusicPlayer.utils.time import get_readable_time
 from pyrogram import filters
 
 
@@ -29,5 +29,5 @@ async def ping(_, message):
     end = datetime.now()
     resp = (end - start).microseconds / 1000
     await response.edit(
-        f"**Pong !!**\n`🚀 {resp} ms`\n\n<b><u>Music System Stats:</u></b>{uptime}"
+        f"**Pong !!**\n`🚶{resp} ms`\n\n<b><u>Music System Stats:</u></b>{uptime}"
     )
