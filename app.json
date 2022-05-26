@@ -3,7 +3,7 @@
     "description": "Inspired by callsmusic and powered by pytgcalls, this bot will allow you to play music without any bugs. Maintained by Akhil.",
    "logo": "https://te.legra.ph/file/38a3ac544f5527a77de18.jpg",
     "keywords": ["telegram music bot", "voice chat", "pytgcalls"],
-    "repository": "https://github.com/AKH1LS/TG-MusicPlayer",
+    "repository": "https://github.com/coderboishadab/TG-MusicPlayer",
     "stack": "container",
     "env": {
         "SESSION_NAME": {
