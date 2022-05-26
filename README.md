@@ -23,7 +23,7 @@
 
 ### I would suggest you to host this on Europe server for better quality and less crashes.
 
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/AKH1LS/TG-MusicPlayer"><img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" target="_blank"/></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/coderboishadab/TG-MusicPlayer"><img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" target="_blank"/></a></p>
 
 </details>
 
